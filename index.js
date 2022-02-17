@@ -16,7 +16,7 @@ prompts
        return generateSite(data);
     })
     .then(generatedMarkup=> {
-        writeSite(generatedMarkup);
+        return writeSite(generatedMarkup);
     })
     .then(writeSiteResponse => {
         console.log(writeSiteResponse);
