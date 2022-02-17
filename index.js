@@ -1,5 +1,6 @@
 const prompts = require("./utils/prompts");
 const generateSite = require("./utils/generate-site");
+const writeSite = require('./utils/write-site');
 
 
 //execute
@@ -12,7 +13,13 @@ console.log("");
 prompts
     .promptManager()
     .then(data => {
-        generateSite(data);
+       return generateSite(data);
+    })
+    .then(generatedMarkup=> {
+        writeSite(generatedMarkup);
+    })
+    .then(writeSiteResponse => {
+        console.log(writeSiteResponse);
     })
     
 
