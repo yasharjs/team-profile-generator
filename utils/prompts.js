@@ -11,21 +11,25 @@ const promptManager = () => {
                 type: 'input',
                 name: 'name',
                 message: "Enter the team manager's name:",
+                validate: input=>validateInput(input)
             },
             {
                 type: "input",
                 name: 'id',
-                message: "Enter the team manager's id:"
+                message: "Enter the team manager's id:",
+                validate: input=>validateInput(input)
             },
             {
                 type: "input",
                 name: "email",
-                message: "Enter the team manager's email:"
+                message: "Enter the team manager's email:",
+                validate: (input) => validateEmail(input)
             },
             {
                 type: "input",
                 name: "officeNum",
-                message: "Enter the team manager's office number:"
+                message: "Enter the team manager's office number:",
+                validate: input=>validateInput(input)
             }
         ])
         .then((answers)=>{
@@ -43,22 +47,26 @@ const engineerPrompt = (teamData) => {
         {
             type:'input',
             name:'name',
-            message:"Enter engineer's name:"
+            message:"Enter engineer's name:",
+            validate: input=>validateInput(input)
         },
         {
             type:"input",
             name:"id",
-            message:"Enter engineer's id:"
+            message:"Enter engineer's id:",
+            validate: input=>validateInput(input)
         },
         {
             type:"input",
             name:"email",
-            message:"Enter engineer's email:"
+            message:"Enter engineer's email:",
+            validate: (input) => validateEmail(input)
         },
         {
             type:"input",
             name:"github",
-            message:"Enter engineer's GitHub username:"
+            message:"Enter engineer's GitHub username:",
+            validate: input=>validateInput(input)
         }
     ])
     .then(answers => {
@@ -77,22 +85,26 @@ const internPrompt = (teamData) => {
         {
             type:'input',
             name:'name',
-            message:"Enter intern's name:"
+            message:"Enter intern's name:",
+            validate: input=>validateInput(input)
         },
         {
             type:'input',
             name:'id',
-            message: "Enter intern's id:"
+            message: "Enter intern's id:",
+            validate: input=>validateInput(input)
         },
         {
             type:'input',
             name:'email',
-            message:"Enter intern's email:"
+            message:"Enter intern's email:",
+            validate: (input) => validateEmail(input)
         },
         {
             type:'input',
             name:'school',
-            message:"Enter intern's school:"
+            message:"Enter intern's school:",
+            validate: input=>validateInput(input)
         }
     ])
     .then(answers => {
@@ -125,6 +137,25 @@ const menuPrompt = (teamData) =>{
         }
     })
 
+}
+
+const  validateInput = (string)=>{
+    if(!string){
+        console.log("");
+        console.log("Please enter a valid input!");
+        return false;
+    }
+    return true;
+
+}
+const validateEmail = (email)=>{
+    
+    if(!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
+        console.log("")
+        console.log("Please enter a correct email address!");
+        return false;
+    }
+    return true;
 }
 
 

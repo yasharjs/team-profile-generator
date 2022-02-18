@@ -5,7 +5,7 @@ const generateIntern = interns =>{
     return `
     ${interns.map(({name,id,email,school})=>{
         return`<div class="col-sm-12 col-md-6 col-lg-4 mt-4">
-        <div class= "card" style=" ">
+        <div class= "card">
             <div class="card-body bg bg-primary">
                 <h5 class="card-title text-white text-uppercase" style="font-size: 1.5rem; font-weight: 500;">${name}</h5>
                 <p class="card-text text-white" style="font-size: 1.3rem; font-weight: 500;"><span class="material-icons" style="font-size: 1.3rem;">badge</span>Intern</p>
@@ -29,7 +29,7 @@ const generateEngineer = engineers =>{
   ${engineers.map(({name,id,email,github})=>{
      return `
      <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
-                <div class= "card" style=" ">
+                <div class= "card">
                     <div class="card-body bg bg-primary">
                         <h5 class="card-title text-white text-uppercase" style="font-size: 1.5rem; font-weight: 500;">${name}</h5>
                         <p class="card-text text-white" style="font-size: 1.3rem; font-weight: 500;"><span class="material-icons" style="font-size: 1.3rem;">badge</span>Engineer</p>
@@ -75,7 +75,7 @@ const getData = (teamData) => {
     <div class="container" style="padding: 2rem;" id="manager" >
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
-                <div class= "card" style=" ">
+                <div class= "card">
                     <div class="card-body bg bg-primary">
                         <h5 class="card-title text-white text-uppercase" style="font-size: 1.5rem; font-weight: 500;">${managerName}</h5>
                         <p class="card-text text-white" style="font-size: 1.3rem; font-weight: 500;"><span class="material-icons" style="font-size: 1.3rem;">badge</span>${role}</p>
