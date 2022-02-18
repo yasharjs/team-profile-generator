@@ -22,7 +22,7 @@ SO THAT YOU have quick access to their emails and GitHub profiles
 
 # Installation
 
-<a href="https://watch.screencastify.com/v/AjCX2S3GjQqbv7zRLhaU" target="_blank"></a>
+<a href="https://watch.screencastify.com/v/AjCX2S3GjQqbv7zRLhaU" target="_blank">Instructional Video!</a>
 
 To use this application you must have Node.js installed on your system. Visit [website](https://nodejs.org/en/download/) to download and install.
 
