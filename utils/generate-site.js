@@ -6,7 +6,7 @@ const generateIntern = interns =>{
     ${interns.map(({name,id,email,school})=>{
         return`<div class="col-sm-12 col-md-6 col-lg-4 mt-4">
         <div class= "card">
-            <div class="card-body bg bg-primary">
+            <div class="card-body" style="background-color: #E5DDC8">
                 <h5 class="card-title text-white text-uppercase" style="font-size: 1.5rem; font-weight: 500;">${name}</h5>
                 <p class="card-text text-white" style="font-size: 1.3rem; font-weight: 500;"><span class="material-icons" style="font-size: 1.3rem;">badge</span>Intern</p>
             </div>
@@ -30,7 +30,7 @@ const generateEngineer = engineers =>{
      return `
      <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
                 <div class= "card">
-                    <div class="card-body bg bg-primary">
+                    <div class="card-body" style="background-color: #01949A;">
                         <h5 class="card-title text-white text-uppercase" style="font-size: 1.5rem; font-weight: 500;">${name}</h5>
                         <p class="card-text text-white" style="font-size: 1.3rem; font-weight: 500;"><span class="material-icons" style="font-size: 1.3rem;">badge</span>Engineer</p>
                     </div>
@@ -70,13 +70,13 @@ const getData = (teamData) => {
     <title>Team Viewer</title>
 </head>
 <body style="font-family: 'oswald',sans-serif;">
-    <h1 class="text-center text-white" style="background-color:crimson; font-size: 3.5rem; padding: 1rem; font-weight: 700;">Team Viewer</h1>
+    <h1 class="text-center text-white" style="background-color:#DB1F48; font-size: 3.5rem; padding: 1rem; font-weight: 700;">Team Viewer</h1>
   
     <div class="container" style="padding: 2rem;" id="manager" >
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
                 <div class= "card">
-                    <div class="card-body bg bg-primary">
+                    <div class="card-body" style="background-color: #004369;">
                         <h5 class="card-title text-white text-uppercase" style="font-size: 1.5rem; font-weight: 500;">${managerName}</h5>
                         <p class="card-text text-white" style="font-size: 1.3rem; font-weight: 500;"><span class="material-icons" style="font-size: 1.3rem;">badge</span>${role}</p>
                     </div>
