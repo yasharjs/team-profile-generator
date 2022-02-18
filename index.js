@@ -1,2 +1,25 @@
-//WHEN I enter the team manager’s name, employee ID, email address, and office number
-//THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
+const prompts = require("./utils/prompts");
+const generateSite = require("./utils/generate-site");
+const writeSite = require('./utils/write-site');
+
+
+//execute
+console.log("");
+console.log("Welcome to the Team Profile Generator!");
+console.log("======================================");
+console.log("");
+
+//prompt
+prompts
+    .promptManager()
+    .then(data => {
+       return generateSite(data);
+    })
+    .then(generatedMarkup=> {
+        return writeSite(generatedMarkup);
+    })
+    .then(writeSiteResponse => {
+        console.log(writeSiteResponse);
+    })
+    
+
