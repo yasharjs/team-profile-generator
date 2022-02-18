@@ -13,7 +13,7 @@ const generateIntern = interns =>{
             <div class="card-body"style="background-color:#e6e6e6;">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item" >ID: ${id} </li>
-                    <li class="list-group-item">Email: ${email}</li>
+                    <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
                     <li class="list-group-item">School: ${school}</li>
                 </ul>
         
@@ -21,7 +21,7 @@ const generateIntern = interns =>{
             
         </div>
     </div>    `
-    })}`
+    }).join('')}`
 }
 
 const generateEngineer = engineers =>{
@@ -37,15 +37,15 @@ const generateEngineer = engineers =>{
                     <div class="card-body"style="background-color:#e6e6e6;">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item" >ID: ${id} </li>
-                            <li class="list-group-item">Email: ${email}</li>
-                            <li class="list-group-item">GitHub: ${github}</li>
+                            <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
+                            <li class="list-group-item">GitHub: <a href="https://github.com/${github}" target="_blank">${github}</a></li>
                         </ul>
                 
                     </div>
                     
                 </div>
             </div>    ` 
-  })}`
+  }).join('')}`
 
 }
 
@@ -83,7 +83,7 @@ const getData = (teamData) => {
                     <div class="card-body"style="background-color:#e6e6e6;">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item" >ID: ${managerId} </li>
-                            <li class="list-group-item">Email: ${managerEmail}</li>
+                            <li class="list-group-item">Email: <a href="mailto:${managerEmail}">${managerEmail}</a></li>
                             <li class="list-group-item">Office Number: ${managerOfficeNum}</li>
                         </ul>
                 
